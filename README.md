@@ -3,6 +3,10 @@
 Project template for building C++ and C projects with CMake and various different compilers
 and IDEs. Install [CMake](https://cmake.org/install/) first.
 
+All builds displayed here are for Debug configurations. To build for release, replace
+`Debug` with `Release` in the folder names and and add `-DCMAKE_BUILD_TYPE=Release` 
+to the CMake build command.
+
 ## Windows - GCC
 
 ### Using MinGW Makefiles
