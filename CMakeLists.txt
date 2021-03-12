@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.6)
 
-project (template)
+project (hello_world)
 
 # Set names and variables
 set(TARGET_NAME ${CMAKE_PROJECT_NAME}) 
