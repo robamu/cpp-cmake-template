@@ -32,7 +32,8 @@ cmake --build . -j
 
 Make sure you can build the application with MinGW64 like specified above. After that
 there are good instructions on how to set up Visual Studio Code 
-[here](https://code.visualstudio.com/docs/cpp/config-mingw)
+[here](https://code.visualstudio.com/docs/cpp/config-mingw). A workspace file is provided as well
+to get started quickly.
 
 #### Using Eclipse
 
