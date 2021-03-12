@@ -34,7 +34,8 @@ there are good instructions on how to set up Visual Studio Code
 
 Copy the `.project` and `.cproject` file found in `misc/eclipse` into the project root
 and open the folder in Eclipse with `Open Project from Filesystem`. Build configurations and 
-launch files for MinGW were provided.
+launch files for MinGW were provided. You have to generate the build system with CMake via 
+command line first before you can Build, Run and Debug with Eclipse.
 
 ## Windows - MSVC
 
@@ -86,13 +87,18 @@ cmake --build . -j
 
 Copy the `.project` and `.cproject` file found in `misc/eclipse` into the project root
 and open the folder in Eclipse with `Open Project from Filesystem`. Build configurations and 
-launch files for Unix systems were provided.
+launch files for Unix systems were provided. You have to generate the build system with CMake via 
+command line first before you can Build, Run and Debug with Eclipse.
 
 #### Using Visual Studio Code
 
 Make sure you can build the application like specified above. After that
 there are good instructions on how to set up Visual Studio Code 
 [here](https://code.visualstudio.com/docs/cpp/config-linux)
+
+## Linux - LLVM
+
+Coming soon.
 
 
 
