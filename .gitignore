@@ -1,3 +1,14 @@
+# CMake
+Debug*
+Release*
+RelWithDeb*
+MinSizeRel*
+
+# Eclipse
+.cproject
+.project
+.settings
+
 # Prerequisites
 *.d
 
