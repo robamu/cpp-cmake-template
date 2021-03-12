@@ -8,8 +8,8 @@ MinSizeRel*
 .cproject
 .project
 .settings
-!**misc/eclipse/.cproject
-!**misc/eclipse/.project
+!**/misc/eclipse/.cproject
+!**/misc/eclipse/.project
 
 # Prerequisites
 *.d
