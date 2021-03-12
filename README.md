@@ -1,2 +1,2 @@
-# tcpip-demo
-TCP/IP demo for Linux and Windows
+# C++ and C project template
+
