@@ -4,7 +4,7 @@ option(USE_LLVM "Use LLVM toolchain" OFF)
 option(USE_BOOST "Use Boost library" OFF)
 
 if(USE_BOOST)
-    if(NOT DEFINED $ENV{BOOST_ROOT})
+    if(NOT DEFINED ENV{BOOST_ROOT})
         message(WARNING "BOOST_ROOT environmental variable not set! Build might fail")
 	endif()
 endif()
