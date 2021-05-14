@@ -1,6 +1,5 @@
 set(CMAKE_C_COMPILER "clang")
 set(CMAKE_CXX_COMPILER "clang++")
-message(STATUS "crap")
 
 set(CMAKE_C_FLAGS_INIT                "-Wall -std=c99")
 set(CMAKE_C_FLAGS_DEBUG_INIT          "-g")
