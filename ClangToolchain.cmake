@@ -1,0 +1,15 @@
+set(CMAKE_C_COMPILER "clang")
+set(CMAKE_CXX_COMPILER "clang++")
+message(STATUS "crap")
+
+set(CMAKE_C_FLAGS_INIT                "-Wall -std=c99")
+set(CMAKE_C_FLAGS_DEBUG_INIT          "-g")
+set(CMAKE_C_FLAGS_MINSIZEREL_INIT     "-Os -DNDEBUG")
+set(CMAKE_C_FLAGS_RELEASE_INIT        "-O3 -DNDEBUG")
+set(CMAKE_C_FLAGS_RELWITHDEBINFO_INIT "-O2 -g")
+
+set(CMAKE_CXX_FLAGS_INIT                "-Wall")
+set(CMAKE_CXX_FLAGS_DEBUG_INIT          "-g")
+set(CMAKE_CXX_FLAGS_MINSIZEREL_INIT     "-Os -DNDEBUG")
+set(CMAKE_CXX_FLAGS_RELEASE_INIT        "-O3 -DNDEBUG")
+set(CMAKE_CXX_FLAGS_RELWITHDEBINFO_INIT "-O2 -g")
