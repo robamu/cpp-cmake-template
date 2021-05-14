@@ -15,16 +15,16 @@ Install [MSYS2](https://www.msys2.org/) first. All command line steps here were 
 in MinGW64. Set up MinGW64:
 
 ```sh
-pacman -Syuuu
-pacman -S git mingw-w64-x86_64-gdb mingw-w64-x86_64-make mingw-w64-x86_64-cmake mingw-w64-x86_64-gcc
+pacman -Syuu
+pacman -S git mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake
+git config --global core.autocrlf true
 ```
 
 Then build the application with
 
 ```cpp
-mkdir Debug-MinGW64
-cd Debug-MinGW64
-cmake .. -G "MinGW Makefiles"
+mkdir build-MinGW64 && cd build-MinGW64
+cmake -G "MinGW Makefiles" ..
 cmake --build . -j
 ```
 
@@ -65,7 +65,25 @@ Not tested yet.
 
 ## Windows - LLVM
 
-Coming soon.
+### Using MinGW Makefiles
+
+Install [LLVM](https://llvm.org/builds/) first.
+Perform the same set-up as specified above for MinGW64.
+
+Ensure you can call `clang --version` from the command line by adding the LLVM binary path
+to the MinGW64 path as well, for example by adding the following line in the `~/.bashrc` file
+
+```sh
+export PATH=$PATH:"/c/Program Files/LLVM/bin"
+```
+
+If everything was set up correctly, you can build the application with `clang`
+
+```cpp
+mkdir build-MinGW64 && cd build-MinGW64
+cmake -G "MinGW Makefiles" -DUSE_LLVM=ON ..
+cmake --build . -j
+```
 
 ## Linux - GCC
 
@@ -103,12 +121,12 @@ there are good instructions on how to set up Visual Studio Code
 
 ## Linux - LLVM
 
-Coming soon.
+Install [LLVM](https://apt.llvm.org/) first.
 
+If everything was set up correctly, you can build the application with `clang`
 
-
-
-
-
-
-
+```cpp
+mkdir build && cd build
+cmake -DUSE_LLVM=ON ..
+cmake --build . -j
+```
