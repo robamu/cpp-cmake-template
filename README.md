@@ -108,10 +108,11 @@ cmake --build . -j
 
 #### Using Eclipse
 
-Copy the `.project` and `.cproject` file found in `misc/eclipse` into the project root
-and open the folder in Eclipse with `Open Project from Filesystem`. Build configurations and 
-launch files for Unix systems were provided. You have to generate the build system with CMake via 
-command line first before you can Build, Run and Debug with Eclipse.
+There are two Eclipse files `.project` and `.cproject` located inside the `misc/eclipse` folder.
+IN the `.project` file, change the name to your project folder name. After that, copy both files
+into the project root and open the folder in Eclipse with `Open Project from Filesystem`. Build
+configurations and  launch files for Unix systems were provided. You have to generate the build
+system with CMake via  command line first before you can Build, Run and Debug with Eclipse.
 
 #### Using Visual Studio Code
 
