@@ -1,7 +1,8 @@
-cmake_minimum_required (VERSION 3.6)
+cmake_minimum_required (VERSION 3.12)
 
 option(USE_LLVM "Use LLVM toolchain" OFF)
 option(USE_BOOST "Use Boost library" OFF)
+option(USE_THREADS "Use threading library" ON)
 
 if(USE_BOOST)
     if(NOT DEFINED ENV{BOOST_ROOT})
@@ -24,6 +25,13 @@ add_executable(${TARGET_NAME})
 if(USE_BOOST)
     target_include_directories(${TARGET_NAME} PRIVATE
 	    $ENV{BOOST_ROOT}
+    )
+endif()
+
+if(USE_THREADS AND UNIX)
+    find_package(Threads REQUIRED)
+    target_link_libraries(${TARGET_NAME} PRIVATE
+        ${CMAKE_THREAD_LIBS_INIT}
     )
 endif()
 
